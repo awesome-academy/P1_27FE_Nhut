@@ -1,0 +1,86 @@
+// style for footer
+.footer {
+  background-color: $black-footer;
+  color: $grey-text;
+  &__container {
+    @include gridtemplate("sub" "info" "nav" "copy",0,1fr);
+    .footer__subcribe {
+      grid-area: sub;
+      &__container {
+        @include gridtemplate("social" "email",0,1fr);
+        .footer__subcribe__social {
+          grid-area: social;
+          &__icon {
+            &__link {
+              color: $white;
+            }
+          }
+        }
+        .footer__subcribe__email {
+          grid-area: email;
+          &__form {
+            &__button {
+              button {
+                background-color: $green-theme;
+                .fa{
+                  color: $white;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    .footer__info {
+      grid-area: info;
+      &__container {
+        @include gridtemplate("desc" "client" "service" "policy" "news",0,1fr);
+        .footer__info__desc {
+          grid-area: desc;
+          &__container {
+            .footer__info__desc__contact {
+              display: none;
+            }
+          }
+        }
+        .footer__info__client {
+          grid-area: client;
+        }
+        .footer__info__service {
+          grid-area: service;
+        }
+        .footer__info__policy {
+          grid-area: policy;
+        }
+        .footer__info__news {
+          grid-area: news;
+        }
+      }
+    }
+    .footer__nav {
+      grid-area: nav;
+      display: none;
+      &__container {
+        @include gridtemplate("hotlink" "payment",0,1fr);
+        .footer__nav__hotlink {
+          grid-area: hotlink;
+        }
+        .footer__nav__payment {
+          grid-area: payment;
+        }
+      }
+    }
+    .footer__info, .footer__nav {
+      border-top: 1px solid $grey-hr;
+    }
+    .footer__copyright {
+      grid-area: copy;
+      background-color: $grey-copyright; 
+      &__container {
+        .footer__copyright__text {
+          color: $white;
+        }
+      }
+    }
+  }
+}
