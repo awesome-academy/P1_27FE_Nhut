@@ -5,10 +5,10 @@ include ../mixins/navfooter.pug
 footer.footer
   .footer__container
     .footer__subcribe
-      .footer__subcribe__container
+      .footer__subcribe__container.max-src.margin-auto
         .footer__subcribe__social
           .footer__subcribe__social__label.uppercase.green-label
-            |Kênh thông tin từ chúng tôi:
+            |Kênh thông tin từ chúng tôi
           .footer__subcribe__social__icon
             +socialf("#","fa-facebook")
             +socialf("#","fa-twitter")
@@ -24,7 +24,7 @@ footer.footer
               button(type="submit")
                 i.fa.fa-paper-plane(aria-hidden="true")
     .footer__info
-      .footer__info__container
+      .footer__info__container.max-src.margin-auto
         .footer__info__desc
           .footer__info__desc__container
             .footer__info__desc__logo
@@ -41,7 +41,7 @@ footer.footer
                 |Email: 
                 a(href="mailto:"+ email) #{email}
         .footer__info__client
-          .footer__info__client__container
+          .footer__info__client__container 
             .footer__info__client__label.uppercase.green-label
               |Thông tin khách hàng
             .footer__info__client__nav
@@ -81,7 +81,7 @@ footer.footer
                         'footer__info__news__nav__menu__item__link',
                         nav_news)
     .footer__nav
-      .footer__nav__container
+      .footer__nav__container.max-src.margin-auto
         .footer__nav__hotlink
           .footer__nav__hotlink__nav
             +navfooter('footer__nav__hotlink__nav__menu',

@@ -48,12 +48,16 @@ $sheila: "VNF Sheila";
 }
 
 // breakpoint
-$breakpoints: (
-  ('xs', 480px),
-  ('s', 624px),
-  ('sm', 768px),
-  ('m', 896px),
-  ('md', 1024px),
-  ('l', 1195px),
-  ('lg', 1366px),
+$breakpoints:
+  ("xs": 480px,
+  "s": 624px,
+  "sm": 768px,
+  "m": 896px,
+  "md": 1024px,
+  "l": 1171px,
+  //"l": 1195px,
+  "lg": 1366px
 );
+
+// display
+$maxScr: 1171px;
