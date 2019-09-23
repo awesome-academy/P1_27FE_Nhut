@@ -12,6 +12,13 @@
   padding-top: $size;
   padding-bottom: $size;
 }
+@mixin my($size) {
+  margin-top: $size;
+  margin-bottom: $size;
+}
+@mixin lineH($size) {
+  line-height: $size;
+}
 
 // display
 @mixin grid {
@@ -27,4 +34,21 @@
   @if $col != 0 {
     grid-template-columns: $col;
   }
+}
+
+// footer
+@mixin navfooter {
+  &__icon {
+    font-size: 10px;
+    margin-right: 2px;
+  }
+  &__link {
+    @include lineH(37px);
+  }
+}
+@mixin navfooter-label {
+  font-size: 14px;
+  font-weight: bold;
+  @include lineH(20px);
+  margin-bottom: 15px;
 }

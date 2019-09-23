@@ -40,6 +40,21 @@
 .hidden {
   display: none; }
 
+.inline-block {
+  display: inline-block; }
+
+.inline {
+  display: inline; }
+
+.float-left {
+  float: left; }
+
+.max-src {
+  max-width: 1171px; }
+
+.margin-auto {
+  margin: 0 auto; }
+
 .footer {
   background-color: #313131;
   color: #b7b7b7; }
@@ -47,46 +62,277 @@
     display: grid;
     width: 100%;
     grid-template-areas: "sub" "info" "nav" "copy";
-    grid-template-columns: 1fr; }
+    grid-template-columns: 1fr;
+    font-size: 12px; }
     .footer__container .footer__subcribe {
-      grid-area: sub; }
+      grid-area: sub;
+      margin-top: 15px;
+      padding-left: 15px;
+      padding-right: 15px;
+      padding-top: 15px;
+      padding-bottom: 15px; }
       .footer__container .footer__subcribe__container {
         display: grid;
         width: 100%;
         grid-template-areas: "social" "email";
         grid-template-columns: 1fr; }
         .footer__container .footer__subcribe__container .footer__subcribe__social {
-          grid-area: social; }
+          grid-area: social;
+          margin-bottom: 35px; }
+          .footer__container .footer__subcribe__container .footer__subcribe__social__label {
+            font-size: 14px;
+            font-weight: bold;
+            line-height: 20px;
+            margin-bottom: 15px; }
           .footer__container .footer__subcribe__container .footer__subcribe__social__icon__link {
             color: #ffffff; }
+            .footer__container .footer__subcribe__container .footer__subcribe__social__icon__link i {
+              font-size: 22px;
+              line-height: 20px; }
+          .footer__container .footer__subcribe__container .footer__subcribe__social__icon__link:not(:last-of-type) {
+            margin-right: 30px; }
+        @media (min-width: 624px) {
+          .footer__container .footer__subcribe__container {
+            display: grid;
+            width: 100%;
+            grid-template-areas: "social email";
+            grid-template-columns: 1fr 1fr; } }
         .footer__container .footer__subcribe__container .footer__subcribe__email {
-          grid-area: email; }
-          .footer__container .footer__subcribe__container .footer__subcribe__email__form__button button {
-            background-color: #3fb871; }
-            .footer__container .footer__subcribe__container .footer__subcribe__email__form__button button .fa {
-              color: #ffffff; }
+          grid-area: email;
+          margin-bottom: 35px; }
+          .footer__container .footer__subcribe__container .footer__subcribe__email__label {
+            font-size: 14px;
+            font-weight: bold;
+            line-height: 20px;
+            margin-bottom: 15px; }
+          .footer__container .footer__subcribe__container .footer__subcribe__email__form {
+            display: flex; }
+            .footer__container .footer__subcribe__container .footer__subcribe__email__form__input {
+              line-height: 46px;
+              width: 100%; }
+              .footer__container .footer__subcribe__container .footer__subcribe__email__form__input input {
+                padding-left: 17px;
+                padding-right: 17px;
+                padding-top: 0;
+                padding-bottom: 0;
+                width: 100%; }
+            .footer__container .footer__subcribe__container .footer__subcribe__email__form__button {
+              line-height: 46px; }
+              .footer__container .footer__subcribe__container .footer__subcribe__email__form__button button {
+                padding: 0;
+                background-color: #3fb871; }
+                .footer__container .footer__subcribe__container .footer__subcribe__email__form__button button .fa {
+                  padding: 15px 17px;
+                  color: #ffffff; }
+      @media (min-width: 896px) {
+        .footer__container .footer__subcribe {
+          padding-top: 0;
+          padding-bottom: 0;
+          margin-top: 30px;
+          margin-bottom: 60px; }
+          .footer__container .footer__subcribe__container {
+            display: grid;
+            width: 100%;
+            grid-template-areas: "social email email";
+            grid-template-columns: 1fr 1fr 1fr; }
+            .footer__container .footer__subcribe__container .footer__subcribe__social {
+              margin-bottom: 0; }
+              .footer__container .footer__subcribe__container .footer__subcribe__social__label {
+                color: #898989;
+                margin-bottom: 0; }
+              .footer__container .footer__subcribe__container .footer__subcribe__social__icon__link .fa {
+                font-size: 16px;
+                line-height: 20px;
+                color: #898989; }
+              .footer__container .footer__subcribe__container .footer__subcribe__social__icon__link:not(:last-of-type) {
+                margin-right: 25px; }
+            .footer__container .footer__subcribe__container .footer__subcribe__email {
+              display: grid;
+              width: 100%;
+              grid-template-areas: "emailLabel emailInput emailInput";
+              grid-template-columns: 1fr 1fr 1fr;
+              margin-bottom: 0; }
+              .footer__container .footer__subcribe__container .footer__subcribe__email__label {
+                grid-area: emailLabel;
+                margin-bottom: 0;
+                padding-right: 15px;
+                color: #898989;
+                padding-right: 15%; }
+              .footer__container .footer__subcribe__container .footer__subcribe__email__form {
+                grid-area: emailInput; } }
+    @media (min-width: 896px) and (min-width: 1171px) {
+      .footer__container .footer__subcribe__container {
+        display: grid;
+        width: 100%;
+        grid-template-areas: "social email email";
+        grid-template-columns: 4fr 7fr; }
+        .footer__container .footer__subcribe__container .footer__subcribe__email {
+          display: grid;
+          width: 100%;
+          grid-template-areas: "emailLabel emailInput";
+          grid-template-columns: 2.5fr 5.5fr; } }
+
     .footer__container .footer__info {
-      grid-area: info; }
+      grid-area: info;
+      padding-left: 15px;
+      padding-right: 15px;
+      padding-top: 15px;
+      padding-bottom: 15px; }
       .footer__container .footer__info__container {
         display: grid;
         width: 100%;
         grid-template-areas: "desc" "client" "service" "policy" "news";
         grid-template-columns: 1fr; }
         .footer__container .footer__info__container .footer__info__desc {
-          grid-area: desc; }
-          .footer__container .footer__info__container .footer__info__desc__container .footer__info__desc__contact {
-            display: none; }
+          grid-area: desc;
+          margin-bottom: 45px; }
+          .footer__container .footer__info__container .footer__info__desc__container {
+            margin-bottom: 15px; }
+            .footer__container .footer__info__container .footer__info__desc__container .footer__info__desc__logo {
+              margin-bottom: 15px; }
+            .footer__container .footer__info__container .footer__info__desc__container .footer__info__desc__intro .footer__info__desc__intro__text {
+              line-height: 23px; }
+            .footer__container .footer__info__container .footer__info__desc__container .footer__info__desc__contact {
+              display: none; }
+              .footer__container .footer__info__container .footer__info__desc__container .footer__info__desc__contact__phone {
+                line-height: 30px; }
+              .footer__container .footer__info__container .footer__info__desc__container .footer__info__desc__contact__email {
+                line-height: 30px; }
         .footer__container .footer__info__container .footer__info__client {
-          grid-area: client; }
+          grid-area: client;
+          margin-bottom: 45px; }
+          .footer__container .footer__info__container .footer__info__client__label {
+            font-size: 14px;
+            font-weight: bold;
+            line-height: 20px;
+            margin-bottom: 15px; }
+          .footer__container .footer__info__container .footer__info__client__container {
+            margin-bottom: 15px; }
+            .footer__container .footer__info__container .footer__info__client__container .footer__info__client__nav__menu__item__icon {
+              font-size: 10px;
+              margin-right: 2px; }
+            .footer__container .footer__info__container .footer__info__client__container .footer__info__client__nav__menu__item__link {
+              line-height: 37px; }
         .footer__container .footer__info__container .footer__info__service {
-          grid-area: service; }
+          grid-area: service;
+          margin-bottom: 45px; }
+          .footer__container .footer__info__container .footer__info__service__label {
+            font-size: 14px;
+            font-weight: bold;
+            line-height: 20px;
+            margin-bottom: 15px; }
+          .footer__container .footer__info__container .footer__info__service__container {
+            margin-bottom: 15px; }
+            .footer__container .footer__info__container .footer__info__service__container .footer__info__service__nav__menu__item__icon {
+              font-size: 10px;
+              margin-right: 2px; }
+            .footer__container .footer__info__container .footer__info__service__container .footer__info__service__nav__menu__item__link {
+              line-height: 37px; }
         .footer__container .footer__info__container .footer__info__policy {
-          grid-area: policy; }
+          grid-area: policy;
+          margin-bottom: 45px; }
+          .footer__container .footer__info__container .footer__info__policy__label {
+            font-size: 14px;
+            font-weight: bold;
+            line-height: 20px;
+            margin-bottom: 15px; }
+          .footer__container .footer__info__container .footer__info__policy__container {
+            margin-bottom: 15px; }
+            .footer__container .footer__info__container .footer__info__policy__container .footer__info__policy__nav__menu__item__icon {
+              font-size: 10px;
+              margin-right: 2px; }
+            .footer__container .footer__info__container .footer__info__policy__container .footer__info__policy__nav__menu__item__link {
+              line-height: 37px; }
         .footer__container .footer__info__container .footer__info__news {
           grid-area: news; }
+          .footer__container .footer__info__container .footer__info__news__label {
+            font-size: 14px;
+            font-weight: bold;
+            line-height: 20px;
+            margin-bottom: 15px; }
+          .footer__container .footer__info__container .footer__info__news__container {
+            margin-bottom: 15px; }
+            .footer__container .footer__info__container .footer__info__news__container .footer__info__news__nav__menu__item__icon {
+              font-size: 10px;
+              margin-right: 2px; }
+            .footer__container .footer__info__container .footer__info__news__container .footer__info__news__nav__menu__item__link {
+              line-height: 37px; }
+        @media (min-width: 624px) {
+          .footer__container .footer__info__container {
+            display: grid;
+            width: 100%;
+            grid-template-areas: "desc desc" "client service" "policy news";
+            grid-template-columns: 1fr 1fr; }
+            .footer__container .footer__info__container .footer__info__desc__container .footer__info__desc__contact {
+              display: block; }
+              .footer__container .footer__info__container .footer__info__desc__container .footer__info__desc__contact__phone {
+                line-height: 30px; }
+                .footer__container .footer__info__container .footer__info__desc__container .footer__info__desc__contact__phone .fa {
+                  font-size: 18px;
+                  color: #3fb871;
+                  margin-right: 10px; }
+              .footer__container .footer__info__container .footer__info__desc__container .footer__info__desc__contact__email {
+                line-height: 30px; }
+                .footer__container .footer__info__container .footer__info__desc__container .footer__info__desc__contact__email .fa {
+                  font-size: 10px;
+                  color: #3fb871;
+                  margin-right: 10px; } }
+        @media (min-width: 896px) {
+          .footer__container .footer__info__container {
+            display: grid;
+            width: 100%;
+            grid-template-areas: "desc desc desc desc" "client service policy news";
+            grid-template-columns: 1fr 1fr 1fr 1fr; }
+            .footer__container .footer__info__container .footer__info__desc {
+              margin-bottom: 30px; }
+              .footer__container .footer__info__container .footer__info__desc__container {
+                margin-bottom: 0; }
+            .footer__container .footer__info__container .footer__info__client {
+              margin-bottom: 0; }
+              .footer__container .footer__info__container .footer__info__client__container {
+                padding-right: 15px;
+                margin-bottom: 0; }
+            .footer__container .footer__info__container .footer__info__service {
+              margin-bottom: 0; }
+              .footer__container .footer__info__container .footer__info__service__container {
+                padding-right: 15px;
+                margin-bottom: 0; }
+            .footer__container .footer__info__container .footer__info__policy {
+              margin-bottom: 0; }
+              .footer__container .footer__info__container .footer__info__policy__container {
+                padding-right: 15px;
+                margin-bottom: 0; }
+            .footer__container .footer__info__container .footer__info__news__container {
+              margin-bottom: 0; } }
+        @media (min-width: 1171px) {
+          .footer__container .footer__info__container {
+            display: grid;
+            width: 100%;
+            grid-template-areas: "desc client service policy news";
+            grid-template-columns: 4.5fr 2.5fr 2fr 2fr 1.5fr; }
+            .footer__container .footer__info__container .footer__info__desc {
+              margin-right: 80px; }
+            .footer__container .footer__info__container .footer__info__client {
+              margin-top: 25px; }
+            .footer__container .footer__info__container .footer__info__service {
+              margin-top: 25px; }
+            .footer__container .footer__info__container .footer__info__policy {
+              margin-top: 25px; }
+            .footer__container .footer__info__container .footer__info__news {
+              margin-top: 25px; } }
+      @media (min-width: 896px) {
+        .footer__container .footer__info {
+          padding-top: 0;
+          padding-bottom: 0;
+          margin-bottom: 50px;
+          border-top: none !important; } }
     .footer__container .footer__nav {
       grid-area: nav;
-      display: none; }
+      display: none;
+      padding-left: 15px;
+      padding-right: 15px;
+      padding-top: 15px;
+      padding-bottom: 15px; }
       .footer__container .footer__nav__container {
         display: grid;
         width: 100%;
@@ -96,12 +342,66 @@
           grid-area: hotlink; }
         .footer__container .footer__nav__container .footer__nav__payment {
           grid-area: payment; }
+      @media (min-width: 624px) {
+        .footer__container .footer__nav {
+          display: block; }
+          .footer__container .footer__nav__container {
+            display: grid;
+            width: 100%;
+            grid-template-areas: "hotlink" "payment";
+            grid-template-columns: 1fr; }
+            .footer__container .footer__nav__container .footer__nav__hotlink__nav__menu {
+              display: flex; }
+              .footer__container .footer__nav__container .footer__nav__hotlink__nav__menu__item__link {
+                line-height: 20px; }
+              .footer__container .footer__nav__container .footer__nav__hotlink__nav__menu__item:not(:last-of-type) {
+                margin-right: 15px; }
+            .footer__container .footer__nav__container .footer__nav__payment__nav__menu {
+              display: flex; }
+              .footer__container .footer__nav__container .footer__nav__payment__nav__menu__item__link {
+                line-height: 18px; }
+                .footer__container .footer__nav__container .footer__nav__payment__nav__menu__item__link .fa {
+                  font-size: 19px; }
+              .footer__container .footer__nav__container .footer__nav__payment__nav__menu__item:not(:last-of-type) {
+                margin-right: 15px; } }
+      @media (min-width: 896px) {
+        .footer__container .footer__nav {
+          padding-top: 25px;
+          padding-bottom: 25px; }
+          .footer__container .footer__nav__container {
+            display: grid;
+            width: 100%;
+            grid-template-areas: "hotlink payment";
+            grid-template-columns: 3fr 1fr; }
+            .footer__container .footer__nav__container .footer__nav__hotlink__nav__menu {
+              display: flex;
+              margin-bottom: 0; }
+              .footer__container .footer__nav__container .footer__nav__hotlink__nav__menu__item__link {
+                line-height: 20px; }
+              .footer__container .footer__nav__container .footer__nav__hotlink__nav__menu__item:not(:last-of-type) {
+                margin-right: 15px; }
+            .footer__container .footer__nav__container .footer__nav__payment__nav__menu {
+              display: flex;
+              justify-content: flex-end;
+              margin-bottom: 0; }
+              .footer__container .footer__nav__container .footer__nav__payment__nav__menu__item__link {
+                line-height: 18px; }
+                .footer__container .footer__nav__container .footer__nav__payment__nav__menu__item__link .fa {
+                  font-size: 19px; }
+              .footer__container .footer__nav__container .footer__nav__payment__nav__menu__item:not(:last-of-type) {
+                margin-right: 15px; } }
     .footer__container .footer__info, .footer__container .footer__nav {
       border-top: 1px solid #494949; }
     .footer__container .footer__copyright {
       grid-area: copy;
+      padding-left: 15px;
+      padding-right: 15px;
+      padding-top: 15px;
+      padding-bottom: 15px;
       background-color: #434343; }
       .footer__container .footer__copyright__container .footer__copyright__text {
-        color: #ffffff; }
+        color: #ffffff;
+        font-size: 14px;
+        line-height: 20px; }
 
 /*# sourceMappingURL=style.css.map */
