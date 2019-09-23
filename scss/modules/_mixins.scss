@@ -1,0 +1,30 @@
+// mixin is mixin
+
+// size
+@mixin fullwidth {
+  width: 100%;
+}
+@mixin px($size) {
+  padding-left: $size;
+  padding-right: $size;
+}
+@mixin py($size) {
+  padding-top: $size;
+  padding-bottom: $size;
+}
+
+// display
+@mixin grid {
+  display: grid;
+  @include fullwidth;
+}
+@mixin gridtemplate($template, $row: 0, $col: 0) {
+  @include grid;
+  grid-template-areas: $template;
+  @if $row != 0 {
+    grid-template-rows: $row;
+  }
+  @if $col != 0 {
+    grid-template-columns: $col;
+  }
+}

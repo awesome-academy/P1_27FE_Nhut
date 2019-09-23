@@ -1,0 +1,107 @@
+@font-face {
+  font-family: "FontAwesome";
+  src: url(../webfonts/fontawesome-webfont.ttf); }
+@font-face {
+  font-family: "KV Arial";
+  src: url(../webfonts/KV-Arial.ttf); }
+@font-face {
+  font-family: "Arial UMS";
+  src: url(../webfonts/ARIALUNI.TTF); }
+@font-face {
+  font-family: "OpenSans";
+  src: url(../webfonts/OpenSans-Regular.ttf); }
+@font-face {
+  font-family: "Roboto";
+  src: url(../webfonts/Roboto-Regular.ttf); }
+@font-face {
+  font-family: "Roboto Slab";
+  src: url(../webfonts/Roboto-Regular.ttf); }
+@font-face {
+  font-family: "UVF Gulyesa";
+  src: url(../webfonts/UVF-GulyesaScript.otf); }
+@font-face {
+  font-family: "VNF Museo";
+  src: url(../webfonts/VNF-Museo.ttf); }
+@font-face {
+  font-family: "VNF Sheila";
+  src: url(../webfonts/VNF-Sheila.ttf); }
+.full-width {
+  width: 100%; }
+
+.uppercase {
+  text-transform: uppercase; }
+
+.green-label {
+  color: #3fb871; }
+
+.text-center {
+  text-align: center; }
+
+.hidden {
+  display: none; }
+
+.footer {
+  background-color: #313131;
+  color: #b7b7b7; }
+  .footer__container {
+    display: grid;
+    width: 100%;
+    grid-template-areas: "sub" "info" "nav" "copy";
+    grid-template-columns: 1fr; }
+    .footer__container .footer__subcribe {
+      grid-area: sub; }
+      .footer__container .footer__subcribe__container {
+        display: grid;
+        width: 100%;
+        grid-template-areas: "social" "email";
+        grid-template-columns: 1fr; }
+        .footer__container .footer__subcribe__container .footer__subcribe__social {
+          grid-area: social; }
+          .footer__container .footer__subcribe__container .footer__subcribe__social__icon__link {
+            color: #ffffff; }
+        .footer__container .footer__subcribe__container .footer__subcribe__email {
+          grid-area: email; }
+          .footer__container .footer__subcribe__container .footer__subcribe__email__form__button button {
+            background-color: #3fb871; }
+            .footer__container .footer__subcribe__container .footer__subcribe__email__form__button button .fa {
+              color: #ffffff; }
+    .footer__container .footer__info {
+      grid-area: info; }
+      .footer__container .footer__info__container {
+        display: grid;
+        width: 100%;
+        grid-template-areas: "desc" "client" "service" "policy" "news";
+        grid-template-columns: 1fr; }
+        .footer__container .footer__info__container .footer__info__desc {
+          grid-area: desc; }
+          .footer__container .footer__info__container .footer__info__desc__container .footer__info__desc__contact {
+            display: none; }
+        .footer__container .footer__info__container .footer__info__client {
+          grid-area: client; }
+        .footer__container .footer__info__container .footer__info__service {
+          grid-area: service; }
+        .footer__container .footer__info__container .footer__info__policy {
+          grid-area: policy; }
+        .footer__container .footer__info__container .footer__info__news {
+          grid-area: news; }
+    .footer__container .footer__nav {
+      grid-area: nav;
+      display: none; }
+      .footer__container .footer__nav__container {
+        display: grid;
+        width: 100%;
+        grid-template-areas: "hotlink" "payment";
+        grid-template-columns: 1fr; }
+        .footer__container .footer__nav__container .footer__nav__hotlink {
+          grid-area: hotlink; }
+        .footer__container .footer__nav__container .footer__nav__payment {
+          grid-area: payment; }
+    .footer__container .footer__info, .footer__container .footer__nav {
+      border-top: 1px solid #494949; }
+    .footer__container .footer__copyright {
+      grid-area: copy;
+      background-color: #434343; }
+      .footer__container .footer__copyright__container .footer__copyright__text {
+        color: #ffffff; }
+
+/*# sourceMappingURL=style.css.map */
