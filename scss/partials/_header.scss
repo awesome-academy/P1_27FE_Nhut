@@ -377,5 +377,11 @@
         max-width: 140%;
       }
     }
+    @media (min-width: #{map-get($breakpoints, "l")}) {
+      &__img.slide-text {
+        max-width: 100%;
+        width: 100%;
+      }
+    }
   }
 }
