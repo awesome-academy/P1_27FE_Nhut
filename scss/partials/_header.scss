@@ -33,6 +33,8 @@
     }
     &__bot {
       background-color: $green-theme;
+      position: relative;
+      z-index: 99;
       &__container {
         color: $white;
         padding: 15px;

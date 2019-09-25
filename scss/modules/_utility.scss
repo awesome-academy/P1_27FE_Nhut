@@ -211,3 +211,24 @@
 .block__item__info-bot__buy {
   display: none;
 }
+
+// cate path
+.cate-path {
+  font-size: 12px;
+  color: $grey-slogan;
+  a {
+    &.--cate-active {
+      color: $green-label;
+    }
+  }
+}
+
+// popup
+.popup {
+  &__container {
+    background-color: $popup-bg;
+    max-width: 800px;
+    max-height: 400px;
+    padding: 20px;
+  }
+}
