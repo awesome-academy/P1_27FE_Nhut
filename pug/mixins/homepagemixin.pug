@@ -1,0 +1,19 @@
+//- mixin use in homepage
+
+//- news block
+mixin news_home(newslist)
+  - var count = Object.keys(newslist).length + 1;
+  - var counts = count - 1;
+  each vals in newslist
+    article.block__item-news(class="item-no" + (count - counts--))
+      a.block__item-news__thumb(href= vals.url)
+        img(src= vals.thumb)
+      .block__item-news__date.italic
+        span #{vals.date}
+      a.block__item-news__title(href= vals.url)
+        h5 #{vals.title}
+      .block__item-news__desc
+        p #{vals.desc}
+      .block__item-news__read-more.italic
+        a(href= vals.url) Đọc tiếp
+
