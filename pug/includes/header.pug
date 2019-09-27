@@ -58,6 +58,7 @@ header.header
               ul.header__top__bot__nav__menu
                 +navheader(nav_header)
     section.header__slide
-      .header__slide__container
-          img.header__slide__img.slide-notext(src= header_slide_nt_img)
-          img.header__slide__img.slide-text(src= header_slide_img)
+      - if(!hide_slide)
+        .header__slide__container
+            img.header__slide__img.slide-notext(src= header_slide_nt_img)
+            img.header__slide__img.slide-text(src= header_slide_img)

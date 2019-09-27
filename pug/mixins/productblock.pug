@@ -33,6 +33,15 @@ mixin blockproduct(listproduct)
           - for(i = i; i <= vals.rating; i++)
             - if(i%2 != 0)
               i.fa.fa-star-half-o(aria-hidden="true")
+        if vals.long_desc
+          p.block__item__info-bot__long-desc= vals.long_desc
         .block__item__info-bot__price
           span.--price-new #{vals.price}.000 đ
           span.--price-old #{vals.old_price}.000 đ
+        .block__item__info-bot__buy
+          button.--buy-now.btn-buy-now.uppercase
+            | Mua ngay
+          a(href= vals.url).--more-info.btn-more-pr-info
+            i.fa.fa-search(aria-hidden="true")
+          a(href="#").--love-product.btn-love-pr
+            i.fa.fa-heart(aria-hidden="true")
