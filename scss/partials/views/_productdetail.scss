@@ -213,4 +213,66 @@
       @include gridtemplates(0,0,1fr 1fr 1fr 1fr,0,30px);
     }
   }
+  @media (max-width: #{map-get($breakpoints, "sm")}) {
+    &__info {
+      @include gridtemplates("info-image info-image"
+                            "info-features info-features",0,0,20px,0);
+    }
+    &__desc {
+      &__tab {
+        a {
+          @include px(15px);
+        }
+      }
+    }
+  }
+  @media (max-width: #{map-get($breakpoints, "m")}) {
+    &__similar {
+      &__block {
+        @include gridtemplates(0,0,1fr 1fr,30px,0);
+      }
+    }
+  }
+  @media (max-width: #{map-get($breakpoints, "s")}) {
+    &__desc {
+      &__tab {
+        a {
+          @include px(10px);
+        }
+      }
+    }
+    &__similar {
+      .block__item {
+        &__info-top {
+          &__desc {
+            display: none;
+          }
+        }
+        &__info-bot {
+          &__price {
+            span {
+              display: block;
+            }
+            .--price-new {
+              margin-right: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+  @media (max-width: #{map-get($breakpoints, "xs")}) {
+    &__desc {
+      &__tab {
+        a {
+          display: block;
+          border-left: 1px solid $grey-border-figure;
+          border-top: 2px solid $grey-border-figure;
+          background-color: $white;
+          border-right: 1px solid $grey-border-figure;
+          color: $grey-text;
+        }
+      }
+    }
+  }
 }

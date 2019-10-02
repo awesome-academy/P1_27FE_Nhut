@@ -303,7 +303,7 @@
                 > ul.sub-menu {
                   display: block;
                   position: absolute;
-                  left: 0;
+                  left: -4px;
                   top: 38px;
                   width: max-content;
                   background-color: $green-theme;
@@ -319,8 +319,8 @@
           &__menu.sub-menu &__menu__item__link {
               background-color: $green-theme;
           }
-          &> &__menu> &__menu__item {
-            float: left;
+          &> &__menu> &__menu__item:not(:first-child)> &__menu__item__link {
+            margin-left: -4px;
           }
         }
       }
