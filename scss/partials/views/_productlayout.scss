@@ -72,6 +72,9 @@
     @include gridtemplates("prs-top-ads" "prs-top-arrange",0,1fr,40px,0);
     &__ads {
       grid-area: prs-top-ads;
+      &__image {
+        width: 100%;
+      }
     }
     &__arrange {
       grid-area: prs-top-arrange;
@@ -272,5 +275,101 @@
   }
   .heading-section-pr--hr {
     margin-bottom: 25px;
+  }
+  @media (max-width: #{map-get($breakpoints, "l")}) {
+    &__main--list {
+      .block__item {
+        &__info-top {
+          display: flex;
+          align-items: center;
+          padding-left: 20px;
+        }
+      }
+    }
+  }
+  @media (max-width: #{map-get($breakpoints, "md")}) {
+    &__main--list {
+      .block__item {
+        @include gridtemplates(0,0,5fr 9fr,0,0);
+      }
+    }
+  }
+  @media (max-width: #{map-get($breakpoints, "m")}) {
+    &__main--grid {
+      @include gridtemplates(0,0,0,0,15px);
+      .block__item {
+        &__info-bot {
+          &__price {
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            .--price-new {
+              margin-right: 0;
+            }
+          }
+        }
+      }
+    }
+    &__cate-list {
+      &__color {
+        .products__cate-list__product__nav {
+          @include gridtemplates(0,0,1fr,15px,unset);
+        }
+      }
+    }
+  }
+  @media (max-width: #{map-get($breakpoints, "sm")}) {
+    &__container {
+      @include gridtemplates("prs-cate-path prs-cate-path"
+                              "prs-top prs-top"
+                              "prs-main prs-main"
+                              "prs-bot prs-bot"
+                              "prs-cate-list prs-cate-list",0,0,0,0);
+    }
+    &__cate-list {
+      @include gridtemplates(0,0,2fr 2fr,0,15px);
+      margin-top: 30px;
+    }
+  }
+  @media (max-width: #{map-get($breakpoints, "s")}) {
+    &__main--grid {
+      @include gridtemplates(0,0,1fr 1fr,0,0);
+    }
+    &__main--list {
+      .block__item {
+        @include gridtemplates("prs-item-thumb prs-item-thumb"
+                                "prs-item-desc prs-item-desc",0,1fr,0,0);
+        &__info-top {
+          padding-left: 0;
+        }
+        &__info-bot {
+          padding-left: 20px;
+          &__buy {
+            justify-content: flex-end;
+          }
+        }
+      }
+    }
+    &__top {
+      &__arrange {
+        &__table {
+          &__link:first-child .fa {
+            margin-bottom: 10px;
+          }
+        }
+      }
+    }
+    &__bot {
+      &__pagination {
+        display: block;
+        &__item {
+          float: left;
+          margin-bottom: 15px;
+          &__link {
+            display: inline-block;
+          }
+        }
+      }
+    }
   }
 }
